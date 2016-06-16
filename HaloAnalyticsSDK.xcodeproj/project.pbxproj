@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		00A4093C1D0FEE65005D4FB0 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409391D0FEE65005D4FB0 /* AnalyticsManager.swift */; };
-		00A4093D1D0FEE65005D4FB0 /* HaloAnalyticsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A4093A1D0FEE65005D4FB0 /* HaloAnalyticsSDK.h */; };
 		00A4093E1D0FEE65005D4FB0 /* Manager+Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4093B1D0FEE65005D4FB0 /* Manager+Analytics.swift */; };
 		00A409481D0FEE73005D4FB0 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A409411D0FEE73005D4FB0 /* Firebase.h */; };
 		00A409491D0FEE73005D4FB0 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A409421D0FEE73005D4FB0 /* FirebaseAnalytics.framework */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		00A4092D1D0FEDF0005D4FB0 /* HaloAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaloAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A409391D0FEE65005D4FB0 /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
-		00A4093A1D0FEE65005D4FB0 /* HaloAnalyticsSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HaloAnalyticsSDK.h; sourceTree = "<group>"; };
 		00A4093B1D0FEE65005D4FB0 /* Manager+Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Manager+Analytics.swift"; sourceTree = "<group>"; };
 		00A409411D0FEE73005D4FB0 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		00A409421D0FEE73005D4FB0 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				00A409391D0FEE65005D4FB0 /* AnalyticsManager.swift */,
-				00A4093A1D0FEE65005D4FB0 /* HaloAnalyticsSDK.h */,
 				00A4093B1D0FEE65005D4FB0 /* Manager+Analytics.swift */,
 				00A409501D100778005D4FB0 /* Event.swift */,
 				00A409521D101591005D4FB0 /* RequestEvent.swift */,
@@ -120,7 +117,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A4093D1D0FEE65005D4FB0 /* HaloAnalyticsSDK.h in Headers */,
 				00A409481D0FEE73005D4FB0 /* Firebase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +298,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/Firebase",
@@ -310,8 +305,9 @@
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.HaloAnalyticsSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.HaloAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/Firebase";
@@ -325,7 +321,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/Firebase",
@@ -333,8 +328,9 @@
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.HaloAnalyticsSDK;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.HaloAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Frameworks/Firebase";
