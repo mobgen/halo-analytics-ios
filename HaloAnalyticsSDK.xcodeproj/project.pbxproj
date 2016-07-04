@@ -19,6 +19,7 @@
 		00A409531D101591005D4FB0 /* RequestEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409521D101591005D4FB0 /* RequestEvent.swift */; };
 		00A409551D10289B005D4FB0 /* TransactionEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409541D10289B005D4FB0 /* TransactionEvent.swift */; };
 		00A409571D104250005D4FB0 /* FirebaseAnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409561D104250005D4FB0 /* FirebaseAnalyticsProvider.swift */; };
+		00ABC4C61D2AAFB400893DB2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00ABC4C51D2AAFB400893DB2 /* libz.tbd */; };
 		00C32A161D19923100FB96E4 /* Halo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C32A151D19923100FB96E4 /* Halo.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		00A409521D101591005D4FB0 /* RequestEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestEvent.swift; sourceTree = "<group>"; };
 		00A409541D10289B005D4FB0 /* TransactionEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionEvent.swift; sourceTree = "<group>"; };
 		00A409561D104250005D4FB0 /* FirebaseAnalyticsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsProvider.swift; sourceTree = "<group>"; };
+		00ABC4C51D2AAFB400893DB2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		00C32A0F1D1988DE00FB96E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C32A151D19923100FB96E4 /* Halo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Halo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00ABC4C61D2AAFB400893DB2 /* libz.tbd in Frameworks */,
 				00C32A161D19923100FB96E4 /* Halo.framework in Frameworks */,
 				0029242B1D19837F0036690B /* GoogleUtilities.framework in Frameworks */,
 				002924271D19837F0036690B /* FirebaseAnalytics.framework in Frameworks */,
@@ -92,6 +95,7 @@
 		00A4093F1D0FEE73005D4FB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00ABC4C51D2AAFB400893DB2 /* libz.tbd */,
 				00C32A151D19923100FB96E4 /* Halo.framework */,
 				00A409401D0FEE73005D4FB0 /* Firebase */,
 			);
@@ -294,6 +298,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -304,6 +309,7 @@
 		00A409361D0FEDF0005D4FB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,7 +323,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(OTHER_LDFLAGS)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.HaloAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -328,6 +337,7 @@
 		00A409371D0FEDF0005D4FB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_MODULES_AUTOLINK = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -341,7 +351,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(OTHER_LDFLAGS)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobgen.HaloAnalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
