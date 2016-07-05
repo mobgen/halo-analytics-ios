@@ -11,6 +11,8 @@ import FirebaseAnalytics
 
 public class FirebaseAnalyticsProvider: AnalyticsProvider {
     
+    public init() {}
+    
     public func setup() {
         FIRApp.configure()
     }

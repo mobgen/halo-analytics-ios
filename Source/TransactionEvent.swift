@@ -20,6 +20,24 @@ public class TransactionEvent: Event {
         return self
     }
     
+    public func productName(value: String) -> TransactionEvent {
+        self.addParam(EventParam.ProductName.rawValue, value: value)
+        return self
+    }
     
+    public func productCategory(value: String) -> TransactionEvent {
+        self.addParam(EventParam.ProductCategory.rawValue, value: value)
+        return self
+    }
     
+    public func productId(value: String) -> TransactionEvent {
+        self.addParam(EventParam.ProductId.rawValue, value: value)
+        return self
+    }
+    
+    public func currency(value: String) -> TransactionEvent {
+        self.addParam(EventParam.Currency.rawValue, value: value)
+        return self
+    }
+
 }

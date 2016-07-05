@@ -12,8 +12,9 @@
 		002924291D19837F0036690B /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002924241D19837F0036690B /* GoogleInterchangeUtilities.framework */; };
 		0029242A1D19837F0036690B /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002924251D19837F0036690B /* GoogleSymbolUtilities.framework */; };
 		0029242B1D19837F0036690B /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002924261D19837F0036690B /* GoogleUtilities.framework */; };
-		00A4093C1D0FEE65005D4FB0 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409391D0FEE65005D4FB0 /* AnalyticsManager.swift */; };
-		00A4093E1D0FEE65005D4FB0 /* Manager+Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4093B1D0FEE65005D4FB0 /* Manager+Analytics.swift */; };
+		00488BE51D2BFBA80087B6E8 /* AnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00488BE41D2BFBA80087B6E8 /* AnalyticsProvider.swift */; };
+		00A4093C1D0FEE65005D4FB0 /* AnalyticsAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409391D0FEE65005D4FB0 /* AnalyticsAddon.swift */; };
+		00A4093E1D0FEE65005D4FB0 /* CoreManager+Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4093B1D0FEE65005D4FB0 /* CoreManager+Analytics.swift */; };
 		00A409481D0FEE73005D4FB0 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A409411D0FEE73005D4FB0 /* Firebase.h */; };
 		00A409511D100778005D4FB0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409501D100778005D4FB0 /* Event.swift */; };
 		00A409531D101591005D4FB0 /* RequestEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409521D101591005D4FB0 /* RequestEvent.swift */; };
@@ -29,9 +30,10 @@
 		002924241D19837F0036690B /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		002924251D19837F0036690B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		002924261D19837F0036690B /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		00488BE41D2BFBA80087B6E8 /* AnalyticsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsProvider.swift; sourceTree = "<group>"; };
 		00A4092D1D0FEDF0005D4FB0 /* HaloAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaloAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		00A409391D0FEE65005D4FB0 /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
-		00A4093B1D0FEE65005D4FB0 /* Manager+Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Manager+Analytics.swift"; sourceTree = "<group>"; };
+		00A409391D0FEE65005D4FB0 /* AnalyticsAddon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsAddon.swift; sourceTree = "<group>"; };
+		00A4093B1D0FEE65005D4FB0 /* CoreManager+Analytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreManager+Analytics.swift"; sourceTree = "<group>"; };
 		00A409411D0FEE73005D4FB0 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		00A409471D0FEE73005D4FB0 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		00A409501D100778005D4FB0 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -61,6 +63,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00488BE31D2BFB8E0087B6E8 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				00A409561D104250005D4FB0 /* FirebaseAnalyticsProvider.swift */,
+				00488BE41D2BFBA80087B6E8 /* AnalyticsProvider.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		00488BE61D2BFBED0087B6E8 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				00A409501D100778005D4FB0 /* Event.swift */,
+				00A409521D101591005D4FB0 /* RequestEvent.swift */,
+				00A409541D10289B005D4FB0 /* TransactionEvent.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
 		00A409231D0FEDF0005D4FB0 = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +103,10 @@
 		00A409381D0FEE65005D4FB0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				00A409391D0FEE65005D4FB0 /* AnalyticsManager.swift */,
-				00A4093B1D0FEE65005D4FB0 /* Manager+Analytics.swift */,
-				00A409501D100778005D4FB0 /* Event.swift */,
-				00A409521D101591005D4FB0 /* RequestEvent.swift */,
-				00A409541D10289B005D4FB0 /* TransactionEvent.swift */,
-				00A409561D104250005D4FB0 /* FirebaseAnalyticsProvider.swift */,
+				00488BE61D2BFBED0087B6E8 /* Events */,
+				00488BE31D2BFB8E0087B6E8 /* Providers */,
+				00A409391D0FEE65005D4FB0 /* AnalyticsAddon.swift */,
+				00A4093B1D0FEE65005D4FB0 /* CoreManager+Analytics.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -204,10 +223,11 @@
 			files = (
 				00A409551D10289B005D4FB0 /* TransactionEvent.swift in Sources */,
 				00A409531D101591005D4FB0 /* RequestEvent.swift in Sources */,
-				00A4093E1D0FEE65005D4FB0 /* Manager+Analytics.swift in Sources */,
+				00A4093E1D0FEE65005D4FB0 /* CoreManager+Analytics.swift in Sources */,
 				00A409511D100778005D4FB0 /* Event.swift in Sources */,
+				00488BE51D2BFBA80087B6E8 /* AnalyticsProvider.swift in Sources */,
 				00A409571D104250005D4FB0 /* FirebaseAnalyticsProvider.swift in Sources */,
-				00A4093C1D0FEE65005D4FB0 /* AnalyticsManager.swift in Sources */,
+				00A4093C1D0FEE65005D4FB0 /* AnalyticsAddon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
