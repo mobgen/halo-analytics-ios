@@ -85,10 +85,10 @@
 		00A409231D0FEDF0005D4FB0 = {
 			isa = PBXGroup;
 			children = (
+				00A4093F1D0FEE73005D4FB0 /* Frameworks */,
+				00A4092E1D0FEDF0005D4FB0 /* Products */,
 				00A409381D0FEE65005D4FB0 /* Source */,
 				00C32A111D198A8100FB96E4 /* Supporting Files */,
-				00A4092E1D0FEDF0005D4FB0 /* Products */,
-				00A4093F1D0FEE73005D4FB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
