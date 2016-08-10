@@ -9,8 +9,8 @@
 import Foundation
 
 public protocol AnalyticsProvider {
-    
+
     func setup()
     func logEvent(event: Event)
-    
+
 }

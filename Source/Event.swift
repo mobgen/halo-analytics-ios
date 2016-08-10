@@ -78,15 +78,15 @@ public enum EventType: String {
 }
 
 public class Event {
-    
+
     internal private(set) var name: String
     internal private(set) var params: [String: AnyObject]
-    
+
     public init(name: String) {
         self.name = name
         self.params = [:]
     }
-    
+
     public func addParam(name: String, value: AnyObject) -> Event {
         params[name] = value
         return self
