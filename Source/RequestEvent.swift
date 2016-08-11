@@ -9,17 +9,17 @@
 import Foundation
 
 public class RequestEvent: Event {
-    
+
     public func time(value: NSTimeInterval) -> RequestEvent {
         self.addParam(EventParam.Time.rawValue, value: value)
         return self
     }
-    
+
     public func url(value: String) -> RequestEvent {
         self.addParam(EventParam.Url.rawValue, value: value)
         return self
     }
-    
+
     public func requestMethod(value: String) -> RequestEvent {
         self.addParam(EventParam.RequestMethod.rawValue, value: value)
         return self
