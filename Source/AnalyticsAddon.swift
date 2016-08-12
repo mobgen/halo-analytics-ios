@@ -79,10 +79,6 @@ public class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
 
     }
 
-    public func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification, core: CoreManager) {
-
-    }
-
     // MARK: Network addon
 
     public func willPerformRequest(request: NSURLRequest) {
