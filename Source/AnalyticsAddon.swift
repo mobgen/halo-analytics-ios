@@ -86,7 +86,7 @@ public class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
     }
 
     public func didPerformRequest(request: NSURLRequest, time: NSTimeInterval, response: NSURLResponse?) {
-        let event = RequestEvent(name: EventType.Request.rawValue).time(time).url(request.URL!.absoluteString).requestMethod(request.HTTPMethod!)
+        let event = RequestEvent(name: EventType.Request.rawValue).time(time).url(request.URL!.absoluteString!).requestMethod(request.HTTPMethod!)
         self.provider.logEvent(event)
     }
 
