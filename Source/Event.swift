@@ -87,7 +87,7 @@ public class Event {
         self.params = [:]
     }
 
-    public func addParam(name: String, value: AnyObject) -> Event {
+    public func addParam(name name: String, value: AnyObject) -> Event {
         params[name] = value
         return self
     }

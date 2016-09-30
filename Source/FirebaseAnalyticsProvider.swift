@@ -17,7 +17,7 @@ public class FirebaseAnalyticsProvider: AnalyticsProvider {
         FIRApp.configure()
     }
 
-    public func logEvent(event: Event) {
+    public func logEvent(event event: Event) {
         let params = event.params as! [String: NSObject]
         FIRAnalytics.logEventWithName(event.name, parameters: params)
     }

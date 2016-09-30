@@ -25,87 +25,83 @@ public class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
 
     // MARK: Addon protocol implementation
 
-    public func setup(core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
+    public func setup(haloCore core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
 
         if self.logNetwork {
-            Halo.Manager.network.registerAddon(self)
+            Halo.Manager.network.registerAddon(addon: self)
         }
 
         self.provider.setup()
         handler?(self, true)
     }
 
-    public func startup(core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
+    public func startup(haloCore core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
         handler?(self, true)
     }
 
-    public func willRegisterAddon(core: CoreManager) {
+    public func willRegisterAddon(haloCore core: CoreManager) {
 
     }
 
-    public func didRegisterAddon(core: CoreManager) {
+    public func didRegisterAddon(haloCore core: CoreManager) {
 
     }
 
-    public func willRegisterUser(core: CoreManager) {
+    public func willRegisterUser(haloCore core: CoreManager) {
 
     }
 
-    public func didRegisterUser(core: CoreManager) {
+    public func didRegisterUser(haloCore core: CoreManager) {
 
     }
 
-    public func applicationDidFinishLaunching(application: UIApplication, core: CoreManager) {
+    public func applicationDidFinishLaunching(application app: UIApplication, core: CoreManager) {
 
     }
 
-    public func applicationDidEnterBackground(application: UIApplication, core: CoreManager) {
+    public func applicationDidEnterBackground(application app: UIApplication, core: CoreManager) {
 
     }
 
-    public func applicationDidBecomeActive(application: UIApplication, core: CoreManager) {
+    public func applicationDidBecomeActive(application app: UIApplication, core: CoreManager) {
 
     }
 
-    public func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData, core: CoreManager) {
+    public func application(application app: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData, core: CoreManager) {
 
     }
 
-    public func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: CoreManager) {
+    public func application(application app: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: CoreManager) {
 
     }
 
-    public func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], core: CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-
-    }
-
-    public func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification, core: CoreManager) {
+    public func application(application app: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], core: CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
 
     }
 
     // MARK: Network addon
 
-    public func willPerformRequest(request: NSURLRequest) {
+    public func willPerformRequest(request request: NSURLRequest) {
 
     }
 
-    public func didPerformRequest(request: NSURLRequest, time: NSTimeInterval, response: NSURLResponse?) {
-        let event = RequestEvent(name: EventType.Request.rawValue).time(time).url(request.URL!.absoluteString).requestMethod(request.HTTPMethod!)
-        self.provider.logEvent(event)
+    public func didPerformRequest(request request: NSURLRequest, time: NSTimeInterval, response: NSURLResponse?) {
+        let event = RequestEvent(name: EventType.Request.rawValue).time(value: time).url(value: request.URL!.absoluteString!).requestMethod(value: request.HTTPMethod!)
+        self.provider.logEvent(event: event)
     }
 
     // MARK: Logging events
 
-    public func logEvent(event: Event) -> Void {
-        self.provider.logEvent(event)
+    public func logEvent(event event: Event) -> Void {
+        self.provider.logEvent(event: event)
     }
 
-    public func logRequestEvent(event: RequestEvent) -> Void {
-        self.provider.logEvent(event)
+    public func logRequestEvent(event event: RequestEvent) -> Void {
+        self.provider.logEvent(event: event)
     }
 
-    public func logTransactionEvent(event: TransactionEvent) -> Void {
-        self.provider.logEvent(event)
+    public func logTransactionEvent(event event: TransactionEvent) -> Void {
+        self.provider.logEvent(event: event)
     }
 
 }

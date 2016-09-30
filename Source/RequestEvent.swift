@@ -10,18 +10,18 @@ import Foundation
 
 public class RequestEvent: Event {
 
-    public func time(value: NSTimeInterval) -> RequestEvent {
-        self.addParam(EventParam.Time.rawValue, value: value)
+    public func time(value value: NSTimeInterval) -> RequestEvent {
+        self.addParam(name: EventParam.Time.rawValue, value: value)
         return self
     }
 
-    public func url(value: String) -> RequestEvent {
-        self.addParam(EventParam.Url.rawValue, value: value)
+    public func url(value value: String) -> RequestEvent {
+        self.addParam(name: EventParam.Url.rawValue, value: value)
         return self
     }
 
-    public func requestMethod(value: String) -> RequestEvent {
-        self.addParam(EventParam.RequestMethod.rawValue, value: value)
+    public func requestMethod(value value: String) -> RequestEvent {
+        self.addParam(name: EventParam.RequestMethod.rawValue, value: value)
         return self
     }
 }
