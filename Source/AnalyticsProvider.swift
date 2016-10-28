@@ -11,6 +11,6 @@ import Foundation
 public protocol AnalyticsProvider {
 
     func setup()
-    func logEvent(event event: Event)
+    func logEvent(event: Event)
 
 }

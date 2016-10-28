@@ -8,20 +8,20 @@
 
 import Foundation
 
-public class RequestEvent: Event {
+open class RequestEvent: Event {
 
-    public func time(value value: NSTimeInterval) -> RequestEvent {
-        self.addParam(name: EventParam.Time.rawValue, value: value)
+    open func time(value: TimeInterval) -> RequestEvent {
+        self.addParam(name: EventParam.Time.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func url(value value: String) -> RequestEvent {
-        self.addParam(name: EventParam.Url.rawValue, value: value)
+    open func url(value: String) -> RequestEvent {
+        self.addParam(name: EventParam.Url.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func requestMethod(value value: String) -> RequestEvent {
-        self.addParam(name: EventParam.RequestMethod.rawValue, value: value)
+    open func requestMethod(value: String) -> RequestEvent {
+        self.addParam(name: EventParam.RequestMethod.rawValue, value: value as AnyObject)
         return self
     }
 }

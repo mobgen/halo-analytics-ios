@@ -77,17 +77,17 @@ public enum EventType: String {
     ViewSearchResults = "view_search_results"
 }
 
-public class Event {
+open class Event {
 
-    internal private(set) var name: String
-    internal private(set) var params: [String: AnyObject]
+    internal fileprivate(set) var name: String
+    internal fileprivate(set) var params: [String: AnyObject]
 
     public init(name: String) {
         self.name = name
         self.params = [:]
     }
 
-    public func addParam(name name: String, value: AnyObject) -> Event {
+    open func addParam(name: String, value: AnyObject) -> Event {
         params[name] = value
         return self
     }
