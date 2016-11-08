@@ -10,7 +10,7 @@ import Halo
 
 extension CoreManager {
 
-    public func logEvent(event: Event) {
+    public func logEvent(_ event: Event) {
         let _ = self.addons.map { addon in
             if let logger = addon as? AnalyticsAddon {
                 logger.logEvent(event: event)

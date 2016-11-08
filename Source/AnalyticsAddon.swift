@@ -11,12 +11,12 @@ import Foundation
 import UIKit
 
 @objc(HaloAnalyticsAddon)
-public class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
+open class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
 
-    private var provider: AnalyticsProvider
-    private var logNetwork: Bool
+    fileprivate var provider: AnalyticsProvider
+    fileprivate var logNetwork: Bool
 
-    public var addonName = "Analytics"
+    open var addonName = "Analytics"
 
     public init(provider: AnalyticsProvider, logNetwork: Bool = false) {
         self.provider = provider
@@ -25,7 +25,7 @@ public class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
 
     // MARK: Addon protocol implementation
 
-    public func setup(haloCore core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
+    open func setup(haloCore core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
 
         if self.logNetwork {
             Halo.Manager.network.registerAddon(addon: self)
@@ -35,72 +35,72 @@ public class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
         handler?(self, true)
     }
 
-    public func startup(haloCore core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
+    open func startup(haloCore core: CoreManager, completionHandler handler: ((Addon, Bool) -> Void)?) {
         handler?(self, true)
     }
 
-    public func willRegisterAddon(haloCore core: CoreManager) {
+    open func willRegisterAddon(haloCore core: CoreManager) {
 
     }
 
-    public func didRegisterAddon(haloCore core: CoreManager) {
+    open func didRegisterAddon(haloCore core: CoreManager) {
 
     }
 
-    public func willRegisterUser(haloCore core: CoreManager) {
+    open func willRegisterUser(haloCore core: CoreManager) {
 
     }
 
-    public func didRegisterUser(haloCore core: CoreManager) {
+    open func didRegisterUser(haloCore core: CoreManager) {
 
     }
 
-    public func applicationDidFinishLaunching(application app: UIApplication, core: CoreManager) {
+    open func applicationDidFinishLaunching(application app: UIApplication, core: CoreManager) {
 
     }
 
-    public func applicationDidEnterBackground(application app: UIApplication, core: CoreManager) {
+    open func applicationDidEnterBackground(application app: UIApplication, core: CoreManager) {
 
     }
 
-    public func applicationDidBecomeActive(application app: UIApplication, core: CoreManager) {
+    open func applicationDidBecomeActive(application app: UIApplication, core: CoreManager) {
 
     }
 
-    public func application(application app: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData, core: CoreManager) {
+    open func application(application app: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data, core: CoreManager) {
 
     }
 
-    public func application(application app: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: CoreManager) {
+    open func application(application app: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: CoreManager) {
 
     }
 
-    public func application(application app: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], core: CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+    open func application(application app: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], core: CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
 
     }
 
     // MARK: Network addon
 
-    public func willPerformRequest(request request: NSURLRequest) {
+    open func willPerformRequest(request: URLRequest) {
 
     }
 
-    public func didPerformRequest(request request: NSURLRequest, time: NSTimeInterval, response: NSURLResponse?) {
-        let event = RequestEvent(name: EventType.Request.rawValue).time(value: time).url(value: request.URL!.absoluteString!).requestMethod(value: request.HTTPMethod!)
+    open func didPerformRequest(request: URLRequest, time: TimeInterval, response: URLResponse?) {
+        let event = RequestEvent(name: EventType.Request.rawValue).time(value: time).url(value: request.url!.absoluteString!).requestMethod(value: request.httpMethod!)
         self.provider.logEvent(event: event)
     }
 
     // MARK: Logging events
 
-    public func logEvent(event event: Event) -> Void {
+    open func logEvent(event: Event) -> Void {
         self.provider.logEvent(event: event)
     }
 
-    public func logRequestEvent(event event: RequestEvent) -> Void {
+    open func logRequestEvent(event: RequestEvent) -> Void {
         self.provider.logEvent(event: event)
     }
 
-    public func logTransactionEvent(event event: TransactionEvent) -> Void {
+    open func logTransactionEvent(event: TransactionEvent) -> Void {
         self.provider.logEvent(event: event)
     }
 

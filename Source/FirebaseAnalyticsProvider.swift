@@ -9,17 +9,17 @@
 import Foundation
 import FirebaseAnalytics
 
-public class FirebaseAnalyticsProvider: AnalyticsProvider {
+open class FirebaseAnalyticsProvider: AnalyticsProvider {
 
     public init() {}
 
-    public func setup() {
+    open func setup() {
         FIRApp.configure()
     }
 
-    public func logEvent(event event: Event) {
+    open func logEvent(event: Event) {
         let params = event.params as! [String: NSObject]
-        FIRAnalytics.logEventWithName(event.name, parameters: params)
+        FIRAnalytics.logEvent(withName: event.name, parameters: params)
     }
 
 }

@@ -8,35 +8,35 @@
 
 import Foundation
 
-public class TransactionEvent: Event {
+open class TransactionEvent: Event {
 
-    public func quantity(value: Int) -> TransactionEvent {
-        self.addParam(name: EventParam.Quantity.rawValue, value: value)
+    open func quantity(_ value: Int) -> TransactionEvent {
+        self.addParam(name: EventParam.Quantity.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func price(value: Int) -> TransactionEvent {
-        self.addParam(name: EventParam.Price.rawValue, value: value)
+    open func price(_ value: Int) -> TransactionEvent {
+        self.addParam(name: EventParam.Price.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func productName(value: String) -> TransactionEvent {
-        self.addParam(name: EventParam.ProductName.rawValue, value: value)
+    open func productName(_ value: String) -> TransactionEvent {
+        self.addParam(name: EventParam.ProductName.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func productCategory(value: String) -> TransactionEvent {
-        self.addParam(name: EventParam.ProductCategory.rawValue, value: value)
+    open func productCategory(_ value: String) -> TransactionEvent {
+        self.addParam(name: EventParam.ProductCategory.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func productId(value: String) -> TransactionEvent {
-        self.addParam(name: EventParam.ProductId.rawValue, value: value)
+    open func productId(_ value: String) -> TransactionEvent {
+        self.addParam(name: EventParam.ProductId.rawValue, value: value as AnyObject)
         return self
     }
 
-    public func currency(value: String) -> TransactionEvent {
-        self.addParam(name: EventParam.Currency.rawValue, value: value)
+    open func currency(_ value: String) -> TransactionEvent {
+        self.addParam(name: EventParam.Currency.rawValue, value: value as AnyObject)
         return self
     }
 
