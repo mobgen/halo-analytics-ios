@@ -190,7 +190,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 00A409271D0FEDF0005D4FB0 /* Build configuration list for PBXProject "HaloAnalyticsSDK" */;
+			buildConfigurationList = 00A409271D0FEDF0005D4FB0 /* Build configuration list for PBXProject "HaloAnalytics" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -395,7 +395,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00A409271D0FEDF0005D4FB0 /* Build configuration list for PBXProject "HaloAnalyticsSDK" */ = {
+		00A409271D0FEDF0005D4FB0 /* Build configuration list for PBXProject "HaloAnalytics" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00A409331D0FEDF0005D4FB0 /* Debug */,

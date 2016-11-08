@@ -17,7 +17,7 @@
                BlueprintIdentifier = "00A4092C1D0FEDF0005D4FB0"
                BuildableName = "HaloAnalytics.framework"
                BlueprintName = "HaloAnalytics"
-               ReferencedContainer = "container:HaloAnalyticsSDK.xcodeproj">
+               ReferencedContainer = "container:HaloAnalytics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,7 +48,7 @@
             BlueprintIdentifier = "00A4092C1D0FEDF0005D4FB0"
             BuildableName = "HaloAnalytics.framework"
             BlueprintName = "HaloAnalytics"
-            ReferencedContainer = "container:HaloAnalyticsSDK.xcodeproj">
+            ReferencedContainer = "container:HaloAnalytics.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -71,7 +71,7 @@
             BlueprintIdentifier = "00A4092C1D0FEDF0005D4FB0"
             BuildableName = "HaloAnalytics.framework"
             BlueprintName = "HaloAnalytics"
-            ReferencedContainer = "container:HaloAnalyticsSDK.xcodeproj">
+            ReferencedContainer = "container:HaloAnalytics.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
