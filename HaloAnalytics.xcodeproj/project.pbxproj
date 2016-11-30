@@ -12,6 +12,7 @@
 		002924291D19837F0036690B /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002924241D19837F0036690B /* GoogleInterchangeUtilities.framework */; };
 		0029242A1D19837F0036690B /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002924251D19837F0036690B /* GoogleSymbolUtilities.framework */; };
 		0029242B1D19837F0036690B /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002924261D19837F0036690B /* GoogleUtilities.framework */; };
+		002EDD351DEEDA5F0022F96D /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002EDD341DEEDA5F0022F96D /* SwiftKeychainWrapper.framework */; };
 		00488BE51D2BFBA80087B6E8 /* AnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00488BE41D2BFBA80087B6E8 /* AnalyticsProvider.swift */; };
 		00A4093C1D0FEE65005D4FB0 /* AnalyticsAddon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A409391D0FEE65005D4FB0 /* AnalyticsAddon.swift */; };
 		00A4093E1D0FEE65005D4FB0 /* CoreManager+Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A4093B1D0FEE65005D4FB0 /* CoreManager+Analytics.swift */; };
@@ -30,6 +31,7 @@
 		002924241D19837F0036690B /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		002924251D19837F0036690B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		002924261D19837F0036690B /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		002EDD341DEEDA5F0022F96D /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = Carthage/Build/iOS/SwiftKeychainWrapper.framework; sourceTree = SOURCE_ROOT; };
 		00488BE41D2BFBA80087B6E8 /* AnalyticsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsProvider.swift; sourceTree = "<group>"; };
 		00A4092D1D0FEDF0005D4FB0 /* HaloAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HaloAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A409391D0FEE65005D4FB0 /* AnalyticsAddon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsAddon.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				00C32A161D19923100FB96E4 /* Halo.framework in Frameworks */,
 				0029242B1D19837F0036690B /* GoogleUtilities.framework in Frameworks */,
 				002924271D19837F0036690B /* FirebaseAnalytics.framework in Frameworks */,
+				002EDD351DEEDA5F0022F96D /* SwiftKeychainWrapper.framework in Frameworks */,
 				002924291D19837F0036690B /* GoogleInterchangeUtilities.framework in Frameworks */,
 				0029242A1D19837F0036690B /* GoogleSymbolUtilities.framework in Frameworks */,
 				002924281D19837F0036690B /* FirebaseInstanceID.framework in Frameworks */,
@@ -115,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				00ABC4C51D2AAFB400893DB2 /* libz.tbd */,
+				002EDD341DEEDA5F0022F96D /* SwiftKeychainWrapper.framework */,
 				00C32A151D19923100FB96E4 /* Halo.framework */,
 				00A409401D0FEE73005D4FB0 /* Firebase */,
 			);

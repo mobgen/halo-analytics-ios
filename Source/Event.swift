@@ -87,6 +87,7 @@ open class Event {
         self.params = [:]
     }
 
+    @discardableResult
     open func addParam(name: String, value: AnyObject) -> Event {
         params[name] = value
         return self

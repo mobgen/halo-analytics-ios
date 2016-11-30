@@ -47,38 +47,6 @@ open class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
 
     }
 
-    open func willRegisterUser(haloCore core: CoreManager) {
-
-    }
-
-    open func didRegisterUser(haloCore core: CoreManager) {
-
-    }
-
-    open func applicationDidFinishLaunching(application app: UIApplication, core: CoreManager) {
-
-    }
-
-    open func applicationDidEnterBackground(application app: UIApplication, core: CoreManager) {
-
-    }
-
-    open func applicationDidBecomeActive(application app: UIApplication, core: CoreManager) {
-
-    }
-
-    open func application(application app: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data, core: CoreManager) {
-
-    }
-
-    open func application(application app: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError, core: CoreManager) {
-
-    }
-
-    open func application(application app: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any], core: CoreManager, fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-
-    }
-
     // MARK: Network addon
 
     open func willPerformRequest(request: URLRequest) {
@@ -86,7 +54,7 @@ open class AnalyticsAddon: NSObject, Halo.Addon, Halo.NetworkAddon {
     }
 
     open func didPerformRequest(request: URLRequest, time: TimeInterval, response: URLResponse?) {
-        let event = RequestEvent(name: EventType.Request.rawValue).time(value: time).url(value: request.url!.absoluteString!).requestMethod(value: request.httpMethod!)
+        let event = RequestEvent(name: EventType.Request.rawValue).time(value: time).url(value: request.url!.absoluteString).requestMethod(value: request.httpMethod!)
         self.provider.logEvent(event: event)
     }
 
